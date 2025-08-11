@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #1f2937 !important; /* gray-900 */
+  transition: background-color 5000s ease-in-out 0s; /* prevent yellow bg */
+}
+
+input:-webkit-autofill::first-line {
+  font-size: 1rem; /* match your p-2 size */
+}

@@ -83,19 +83,19 @@ data.forEach(d => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center px-8">
-      <h1 className="text-2xl font-bold text-center mb-6">OC Vehicle Finder</h1>
+      <h1 className="text-2xl text-gray-900 font-bold text-center mb-6">OC Vehicle Finder</h1>
     
       <input
-        type="text"
-        placeholder="Search by flat, car number, or model"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="w-full border rounded-md p-2 mb-4 focus:outline-none focus:ring focus:border-blue-400"
-      />
+  type="text"
+  placeholder="Search by flat, car number, or model"
+  value={query}
+  onChange={(e) => setQuery(e.target.value)}
+  className="w-full border rounded-md p-2 mb-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring focus:border-blue-400"
+ />
 
       <div className="space-y-4">
         {results.length === 0 && query && (
-          <p className="text-gray-500 text-center">
+          <p className="text-center">
             No matching records found.
           </p>
         )}
@@ -116,17 +116,17 @@ data.forEach(d => {
             );
           } else if (res.type === "car") {
             return (
-              <div key={index} className="p-4 border rounded-md shadow">
-                Car <span className="font-semibold">{res.car.number}</span> (
+              <div key={index} className="text-gray-900 p-4 border rounded-md shadow">
+                Car <span className="text-gray-900 font-semibold">{res.car.number}</span> (
                 {res.car.model}) belongs to{" "}
                 <span className="font-semibold">Flat {res.flat}</span>.
               </div>
             );
           } else if (res.type === "model") {
             return (
-              <div key={index} className="p-4 border rounded-md shadow">
+              <div key={index} className="text-gray-900 p-4 border rounded-md shadow">
                 <h2 className="font-semibold">Cars with model "{query}":</h2>
-                <ul className="list-disc pl-6">
+                <ul className="text-gray-900 list-disc pl-6">
                   {res.matches.map((m, i) => (
                     <li key={i}>
                       {m.car.number} - Flat {m.flat}
