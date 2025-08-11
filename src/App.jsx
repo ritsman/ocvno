@@ -82,7 +82,7 @@ data.forEach(d => {
   }, [query, data]);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center px-8">
+    <div className="text-gray-900 min-h-screen bg-gray-50 flex flex-col items-center px-8">
       <h1 className="text-2xl text-gray-900 font-bold text-center mb-6">OC Vehicle Finder</h1>
     
       <input
